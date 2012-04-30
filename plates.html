@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Plate Program Explanation</title>
+
+  
+	
+  <link rel="stylesheet" href="liquid.css" type="text/css" media="all">
+  <link rel="stylesheet" href="shaddow.css" type="text/css" media="all">
+
+</head><body>
+
+
+<div id="container">
+	<div id="header">
+		<img src="title.gif" alt="Code Ronin: code bushi without a master"/>
+	</div>
+
+	<div id="content">
+	<table>
+		<td class="content1"><div class="contenttext">
+	<div id="shadow-container">
+		<div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container2">
+		<iframe class="program" src="trial.html" frameborder="0"></iframe><br>
+		<p> 
+		Why did I do it the way that I did it?<br>
+		I used the mathematical principles of combinatorics. The best way to get to large number of combinations, is to use variables with the most posibilities.<br>
+		Since the plates can use numbers and letters, the simplest pattern would result from each figure in the plate using all the possibilities. The assumption is that the simplest pattern will be the shortest pattern. <br>
+		There are 35 possibilities using the digits 0-9 and the letters A-Z. The maximum number of plates can be determined using the formula #=35<sup>n</sup>, when n is the number of digits.
+		</p>
+		<p>
+		So the first step is to determine the least number of figures that will give enough combinations to provide unique plates for the entire population. <br><br><code>
+		for (var n=0; Math.pow(35,(n+1))&lt pop; n++, z=n, x=Math.pow(35,n)) {
+				
+			}	
+		</code><br>
+		This will determine the number of figures that will use all 35 possible figures.	
+		</p>
+		<p>
+		The next step determines the least number of possibilities the last digit needs to have in order to provide enough combinations.
+		<br><br><code>
+		for (var i=1; Math.pow(35,z)*i &lt pop; i++, j=i, x=x*i) {
+				
+			}
+		</code><br>
+		Now we have a good plan to get the right number of plates with little waste. 
+		</p>
+		<p>
+		The question is, can we get less waste. In order to determine if there is a better combination test the last two figures to determine if there is a combination for the last two digits that provides lest waste.
+		<br><br><code>
+		for (var i=1; i &lt 35; i++) {
+				for (var k=1; k &lt 35; k++) {
+					y=Math.pow(35, (z-1))*i*k;
+							if (y &gt pop && (y-pop) &lt (x-pop)) {
+								x=y;
+								j=k;
+			document.write(" &lt br &gt ");								
+			document.write("The second to last figure will use one of " +i);
+			document.write(" figures.");
+							}
+				}
+			}
+		</code><br>
+		</p>
+		<p>
+		I looked to see if testing more figures provided less waste, but I did not get less waste in my tests when I tested the third and fourth figures.
+		</p>
+		<p> 
+		One problem I found was for populations less than 35. The first check would return no positive results so the whole check failed. In order to recover from this problem I added a final step to set the number of figures to one, and the number of possibilites from that set to the size of the population.
+		<br><br><code>
+		if (pop<=35) {
+				x=pop;
+			}
+		</code><br>
+		<p>
+		The rest of the code is for output, and the output is done when needed in order to not have conflicting statements from the different loops, and tests. The entire code can be viewed <a href="plates.js"> here</a>. I chose to use java because the program is easly run in a web browser with java enabled. Since the CodeFu application included a webpage I decided to make the entire application one complete project. Since the webpages will not be on a server that can execute php, python, or ruby those choices were a no go, otherwise I would have prefered their use. Java requires the user to have certain options enabled, this can be problematic, while php, python, and ruby can be done server side and are under the developer's control. 
+		</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+		</div></td><td></td>
+	
+	<td class="navbar">
+			<div class="contentright">
+			<a href="index.html">Liquid Layout</a><br><br>
+			With the popularization of mobile devices, and various different home devices for consuming internet content the need for resizable internet content is more important than ever. As technology becomes more integrated into our lives there will be more need for portability of content. From internet enabled windows, to the possibility of mobile HUD for daily life. Liquid displays are needed. Since Java is not guarantee to be enabled and CSS3 is  coming out it is best done without code and done with web markup.<br>
+			</div>
+		
+			<div class="contentright">
+			<a href="bus.html"> Balls in a Bus:</a><br><br>
+			Use the formula<br>
+			<img src="equation2.png"><br>
+			to determine the number of balls you can fit in any container.
+			</div>
+
+	</td></table>
+	</tr>
+
+	
+
+	
+	</div>
+
+<div class="seperator">
+.
+</div>
+
+</div>
+
+<div id="footer">
+	
+</div>
+
+
+<br>
+
+<br>
+</body></html>

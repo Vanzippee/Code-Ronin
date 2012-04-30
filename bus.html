@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Plate Program Explanation</title>
+
+  
+	
+  <link rel="stylesheet" href="liquid.css" type="text/css" media="all">
+  <link rel="stylesheet" href="shaddow.css" type="text/css" media="all">
+
+</head><body>
+
+
+<div id="container">
+	<div id="header">
+		<img src="title.gif" alt="Code Ronin: code bushi without a master"/>
+	</div>
+
+	<div id="content">
+	<table>
+		<td class="content1"><div class="contenttext">
+	<div id="shadow-container">
+		<div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container2">
+		<p style="text-align:center">
+		When balls are stacked, then don't sit one on the other.  They settle down to sit "between" each other. This needs to be taken into consideration when determining the dimensions that each ball will take up.<br>
+		<img src="balldiagram.png"><br>
+		<img src="equation1.png"><br>
+		So each row of balls takes up <img src="root3.png"> distance with an additional 2r from the outside balls on either end. If we determine the dimensions on the bus in terms of ball radii we can determine the number of balls that can fit in the bus with the formula:<br> <img src="equation2.png"><br>
+		One nice element of this formula is that it should work for any size of ball and any container if you substitute in the correct radius and dimension. <br><br>
+		Radius of a ping-pong ball: 40 mm (International Table Tennis Federation)<br><br>
+		40mm = 4 cm<br>
+		2.54 cm = 1"<br>
+		4cm / 2.54 = 1.633"<br><br>
+		Dimensions of 77 passenger bus: (Blue Bird All American Rear Engine)<br><br>
+
+		Length: 245" + 94.48" + 121.75" = 461.23"<br>
+		Width: 90.75"<br>
+		Height: 78"<br><br>
+		
+		We also need to consider that the top is not a straight line it is a curve. I approximated the lost space as a tirangular prism. Using a picture of the bus and the known dimentions I determined the dimensions to be:<br><br>
+		<img src="diagram2.png"><br><br>
+		Length = 461.23"<br>
+		Width = 36"<br>
+		Height = 8"<br><br>
+		I apply the same equation to these dimensions as I do to the dimensions of the bus, but take the value away from the total. With the values in the equation:<br><br>
+		<img src="equation3.png"><br><br>
+		<img src="equation4.png"><br><br>
+		<img src="answer.png"><br>
+		
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+		</div></td><td></td>
+	
+	<td class="navbar">
+			<div class="contentright">
+			<a href="index.html">Liquid Layout</a><br><br>
+			With the popularization of mobile devices, and various different home devices for consuming internet content the need for resizable internet content is more important than ever. As technology becomes more integrated into our lives there will be more need for portability of content. From internet enabled windows, to the possibility of mobile HUD for daily life. Liquid displays are needed. Since Java is not guarantee to be enabled and CSS3 is  coming out it is best done without code and done with web markup.<br>
+			</div>
+		
+			<div class="contentright">
+			<a href="plates.html">Plates Program</a><br><br>
+			<p>Need to make plates for a population?<br>
+			Here is a program written in Java that will tell you the best way to do it. It'll run right in your browser!<br>
+			On this page the program is described, and the rational for making it is clearly outlined.</p>
+			</div>
+
+	</td></table>
+	</tr>
+
+	
+
+	
+	</div>
+
+<div class="seperator">
+.
+</div>
+
+</div>
+
+<div id="footer">
+
+</div>
+
+
+<br>
+
+<br>
+</body></html>

@@ -1,0 +1,39 @@
+#shadow-container {
+	position: relative;
+	left: 3px;
+	top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	border-radius: 10px;
+}
+ 
+#shadow-container .shadow2,
+#shadow-container .shadow3,
+#shadow-container .container2 {
+	position: relative;
+	left: -2px;
+	top: -2px;
+	border-radius: 10px;
+}
+ 
+	#shadow-container .shadow1 {
+		background: #ab3626;
+		border-radius: 10px;
+	}
+ 
+	#shadow-container .shadow2 {
+		background: #612419;
+		border-radius: 10px;
+	}
+ 
+	#shadow-container .shadow3 {
+		background: #7F2C21;
+		border-radius: 10px;	
+	}
+ 
+	#shadow-container .container2 {
+		background: black;
+		border: 1px solid #CC3626;
+		padding: 10px;
+		border-radius: 10px;
+	}
